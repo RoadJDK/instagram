@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root "login#index"
   
   get "/login", to: "login#index"
