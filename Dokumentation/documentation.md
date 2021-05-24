@@ -57,6 +57,10 @@ In diesem Fall haben wir zwei sechsen, bedeutet die Zeile ist in zwei Teile unte
 (Phone und Loginscreen)  
 
 ### Bootstrap Navbar  
+Eine Navigation ist ein "navigation header" zuoberst der Seite.  
+Mit Bootstrap kann eine Navigation extended oder collapsed sein. Abhängig von der Bildschirmgrösse.  
+Das macht Bootstrap automatisch.  
+Was alles in der Navbar ist, wird in einer Liste festgelegt.  
 
 ### Devise authentifizierung
 
