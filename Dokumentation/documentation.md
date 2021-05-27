@@ -63,16 +63,58 @@ Das macht Bootstrap automatisch.
 Was alles in der Navbar ist, wird in einer Liste festgelegt.  
 
 ### Devise authentifizierung
+Die Devise Gem ist Benutzer für die Benutzer-Authentifizierung, Es erstellt Anmelde- und Anmeldeformulare, es kann auch verwendet werden, um Benutzerkonten für die Privatsphäre zu erstellen.
+
+Es:
+* ist Rack-basiert;
+* eine komplette MVC-Lösung, die auf Rails-Engines basiert;
+* Erlaubt es, mehrere Modelle gleichzeitig anzumelden;
+* Basiert auf einem Modularitätskonzept: Verwenden Sie nur das, was Sie wirklich brauchen.
 
 ### CSS Image Sprites
+Ein Bild-Sprite ist eine Sammlung von Bildern, die in einem einzigen Bild zusammengefasst sind.  
+
+Eine Webseite mit vielen Bildern kann sehr lange zum Laden brauchen und erzeugt mehrere Serveranfragen.  
+
+Durch die Verwendung von Bild-Sprites wird die Anzahl der Serveranfragen reduziert und Bandbreite gespart.  
+  
+Beispiel für die Verwendung:
+``` css
+#home {
+  width: 46px;
+  height: 44px;
+  background: url(img_navsprites.gif) 0 0;
+}
+```
 
 ### Dummy-Phone
+Das Phone ist ein Hintergrund-Bild.  
+Die Grösse und Bilder auf dem Phone sind durch Sass-Klassen perfekt aufeinander gestellt.  
+
+Die Bilder sind in einem Bootstrap - Karussel    
+Das Karussell ist eine Diashow zum Durchlaufen einer Reihe von Inhalten, die mit CSS 3D-Transformationen und JavaScript erstellt wurde. Es funktioniert mit einer Reihe von Bildern oder Text.
 
 ### Sass vs CSS
+Vorteile/Nachteile von Sass über CSS:
+| Vorteile                | Nachteile                   |
+|-------------------------|-----------------------------|
+| Übersichtlicher Code    | Code muss kompiliert werden |
+| Umfangreiches Framework | Erschwerte Fehlersuche      |
+| Variabeln               | Höherer Lernaufwand         |
+| Mehr Möglichkeiten      |                             |
 
 ### Partial Views
+Mit Partial Views können auf einer View andere Views gerendert werden.  
+Dies wird mit diesem Command gemacht:
+
+``` ruby
+<%= render "_partial" %>
+```
 
 ### Rails Migrationen
+Migrationen sind eine Möglichkeit, Ihr Datenbankschema im Laufe der Zeit auf konsistente Weise zu ändern. 
+
+Man kann sich jede Migration als eine neue "Version" der Datenbank vorstellen. Ein Schema beginnt mit nichts darin, und jede Migration verändert es, um Tabellen, Spalten oder Einträge hinzuzufügen oder zu entfernen. Active Record weiß, wie Sie Ihr Schema entlang dieser Zeitachse aktualisieren und es von einem beliebigen Punkt in der Historie auf die neueste Version bringen können.
 
 ## Selbstreflexion  
 Ich wusste schon ziemlich viel über Bootstrap, Sass und HTML.  
