@@ -6,7 +6,9 @@
 import Rails from "@rails/ujs"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import "bootstrap";
+import "bootstrap"
+
+global.toastr = require("toastr")
 
 Rails.start()
 ActiveStorage.start()
