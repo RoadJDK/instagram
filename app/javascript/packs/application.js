@@ -3,12 +3,14 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import Rails from "@rails/ujs"
-import * as ActiveStorage from "@rails/activestorage"
-import "channels"
-import "bootstrap"
+import Rails from "@rails/ujs";
+import * as ActiveStorage from "@rails/activestorage";
+import "channels";
+import "bootstrap";
 
-global.toastr = require("toastr")
+import "@fortawesome/fontawesome-free";
 
-Rails.start()
-ActiveStorage.start()
+global.toastr = require("toastr");
+
+Rails.start();
+ActiveStorage.start();
