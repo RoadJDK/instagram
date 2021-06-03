@@ -17,7 +17,7 @@
 						<span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
 					</div>
 					<div class="fallback custom-file">
-						<%= file_field_tag "images[]", type: :file, class: "custom-file-input", multiple: true %>
+						<%= file_field_tag "images[]", type: :file, class: "custom-file-input", multiple: true, :required => 'required' %>
 						<label class="custom-file-label" for="images_">Select pictures</label>
 					</div>
 				</div>
@@ -26,11 +26,8 @@
 				<% end %>
 			</div>
 		</div>
+    <div id="post">
+      <%= render 'posts_list' %>
+    </div>
 	</div>
 </div>
-<% @posts.each do |post| %>
-  <p> <%= post.content %> </p>
-  <% post.photos.each do |photo| %>
-    <%= image_tag photo.image.url(:standard) %>
-  <% end %>
-<% end %>

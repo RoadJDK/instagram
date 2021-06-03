@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
+  root to: 'posts#index'
   devise_for :users, controllers: { registration: 'registrations'}
 
   resources :users, only: [:index, :show]

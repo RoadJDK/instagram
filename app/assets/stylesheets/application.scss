@@ -1,6 +1,12 @@
 @import "bootstrap/scss/bootstrap";
 @import "toastr/build/toastr.min";
 
+$fa-font-path: "@fortawesome/fontawesome-free/webfonts";
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/regular";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/brands";
+
 body {
   background-color: #fafafa;
   font-size: 14px;
@@ -263,4 +269,93 @@ footer .nav-item {
   width: 40px;
   border-radius: 50%;
   margin-right: 10px;
+}
+
+.post {
+  .card-header {
+    background-color: white;
+  }
+  .card-body {
+    padding: 5px 16px 5px;
+  }
+  .actions {
+    margin: 12px 0;
+  }
+  .post-time {
+    margin-top: 5px;
+    fonz-size: 10px;
+  }
+  .comment-input {
+    font-size: 14px;
+    resize: none;
+  }
+  .previous-btn {
+    background-position: -281px -280px;
+    height: 30px;
+    opacity: 1;
+    width: 30px;
+  }
+  .next-btn {
+    background-position: -353px 0px;
+    height: 30px;
+    opacity: 1;
+    width: 30px;
+  }
+}
+
+.love {
+  background-position: -325px -329px;
+  height: 24px;
+  width: 24px;
+}
+
+.loved {
+  @extend .love;
+  background-position: -200px -330px;
+}
+
+.comment {
+  @extend .love;
+  background-position: -258px -176px;
+}
+
+.bookmark {
+  @extend .love;
+  background-position: -150px -355px;
+}
+
+.bookmarked {
+  @extend .love;
+  background-position: -353px -273px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.icon-gray {
+  color: gray;
+  &:hover {
+    color: #444444;
+  }
+}
+
+.icon-red {
+  color: firebrick;
+  &:hover {
+    color: maroon;
+  }
+}
+
+.icon-spacer {
+  margin-right: 10px;
+}
+
+.no-text-decoration:hover {
+  text-decoration: none;
+  color: #262626;
+}
+
+.normal-color {
+  color: #262626;
 }
