@@ -39,20 +39,92 @@ Dies ist das Dokument für den Auftrag 4+5, beziehungsweise die zweite Doku.
 ### Flash-Meldungen
 Eine Flash-Meldung ist eine Möglichkeit für die Rails-App mit dem User zu kommunizieren, als Resultat auf ihre Aktionen.  
 
-### JavaScript Toaster-Meldungen
+Zum Beispiel:  
+* Falsche E-Mail angegeben
+* Passwort erfolgreich geändert
+* Kein User gefunden
 
-### Unterschied Flash-Meldungen / Models
+Im Controller legt man die Meldungen fest, und in den Views werden sie dann gerendert.  
+
+### JavaScript Toaster-Meldungen
+Eine Toast Meldung ist eine Alert Nachricht.  
+Meistens werden diese oben Rechts in einer kleinen Box gerendert.  
+
+Sie sollen auf die populären Handy Benachrichtigungen anspielen.  
+
+Das ganze funktioniert mit JavaScript / JQuery
+
+So sieht ein Beispiel aus:  
+```ruby
+toastr.info('Das ist eine Meldung)
+```
+
+### Unterschied Flash-Meldungen / Model-Meldungen
+Eine Modelmeldung ist eine Meldung, welche bei auftreten, wenn eine Bedingung (Welche im Model definiert wurden) nicht erfüllt wurde.  
+Ganz klassisch wäre das die rote Umrandung um das Form-Field.  
+Diese Meldungen muss man aber definieren.  
+
+Eine Flashmeldung kann die selbe Aufgabe übernehmen, jedoch werden die oben Rechts wie eine Pushnachricht gerendert.  
+Meistens nehmen Flashmeldungen zusätzliche Aufgaben ein, und informieren User auch über erfolgreiche Logins, abänderungen oder Logouts.  
+
 
 ### Bootstrap Modal
+Ein Bootstrap Modal ist eine Art, um einen Dialog in der Webseite darzustellen.  
+
+Standartmässig gibt es eine kleine Box, welche einen Titel, einen Body und Buttons hat.  
+
+So sieht ein Beispiel Modal in der Darstellung aus:
+```ruby
+<%= link_to "Open modal", "#my-modal", :class => "btn", "data-toggle" => "modal" %>
+<div class="modal hide fade" id="my-modal" title="My modal">
+  <div class="modal-header">
+    <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+    <h3 id="myModalLabel">Modal header</h3>
+  </div>
+  <div class="modal-body">
+    Modal Body
+  </div>
+  <div class="modal-footer">
+    <button aria-hidden="true" class="btn" data-dismiss="modal">Close</button>
+  </div>
+</div>
+```
 
 ### Gravatar
+Ein "Avatar" ist ein Bild, das Sie online repräsentiert - ein kleines Bild, das neben Ihrem Namen erscheint, wenn Sie mit Websites interagieren.  
+
+Ein Gravatar ist ein weltweit anerkannter Avatar. Sie laden ein Bild hoch und erstellen Ihr öffentliches Profil nur einmal, und wenn Sie dann an einer Gravatar-aktivierten Website teilnehmen, folgen Ihnen Ihr Gravatar-Bild und Ihr öffentliches Profil automatisch dorthin.  
+
+Gravatar ist ein kostenloser Service für Website-Besitzer, Entwickler und Benutzer. Er ist automatisch in jedem WordPress.com-Konto enthalten und wird von Automattic betrieben und unterstützt.  
+
+In unserem Fall ist das besonders praktisch.
 
 ### CarrierWave
+CarrierWave ist ein Plugin von Cloudinary extra für Rails Applikationen.  
+
+Das CarrierWave-Gem kann nützlich sein, um Bild-Uploads in das Modell zu integrieren. Standardmäßig speichert CarrierWave Bilder auf der lokalen Festplatte, aber es stehen auch zusätzliche Plugins für die Speicherung und Manipulation von Bildern zur Verfügung.  
+
+Das Cloudinary gem stellt ein Plugin für CarrierWave zur Verfügung. Vorteile von CarrierWave ist das einfache Hochladen von Bildern aus HTML-Formularen in das Modell. Hochgeladene Bilder werden in der Cloud gespeichert, in der Cloud transformiert und manipuliert und automatisch über ein _CDN_ ausgeliefert.  
+
+CDN = Content Delivery Network  
+(Ein Verteiler im Netzwerk, welche vorallem Mediendateien teilt)  
 
 ### Cloudinary
+Cloudinary ist ein Service für den Upload von Bildern.  
+
+Es stellt eine API zur Verfügung, mit welcher man die hochgeladenen Bilder editieren, hosten und zur Verfügung stellen kann.  
 
 ### Mit Figaro Informationen verstecken
 
+Figaro wurde geschrieben, um die sichere Konfiguration von Rails-Anwendungen zu erleichtern.
+
+Konfigurationswerte enthalten oft sensible Informationen. Figaro strebt danach, standardmäßig sicher zu sein, indem es eine Konvention fördert, die die Konfiguration aus Git heraushält.
+
+Dies ist in Produktionsumgebungen einfach, aber lokale Entwicklungsumgebungen werden oft von mehreren Anwendungen gemeinsam genutzt, was mehrere Konfigurationen erfordert.
+
+Figaro parst eine Git-ignorierte YAML-Datei in Ihrer Anwendung und lädt deren Werte in ENV.
+
+Somit ist es optimal für unsere Cloudinary API-Token.  
 
 ## Selbstreflexion  
 Bis auf Gravatar war das meiste für mich neu.  
