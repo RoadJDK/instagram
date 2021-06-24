@@ -33,8 +33,43 @@ Dies ist das Dokument für den Auftrag 6+7, beziehungsweise die dritte Doku.
 
 ## Technologien  
 
-### Test
+### DropzoneJS
+__Mit DropzoneJS:__  
 
+Dropzone ist eine JavaScript Bibliothek, welche Bilderupload mit einer Bildervorschau ermöglicht.
+
+__Ohne DropzoneJS__  
+Ohne Dropzone kommt lediglich ein Fenster, mit welcher man die Bilder auswählen kann. Und das ganze ohne Vorschau.
+
+Dropzone kann man innerhalb vom html aufrufen.
+
+Hier ein kleines Beispiel:  
+'''html
+<form action="/file-upload"
+      class="dropzone"
+      id="my-awesome-dropzone"></form>
+'''
+
+Installieren tut man Dropzone als standalone.
+Diese wird als zip gedownloaded und muss irgendwo im Projekt abgespeichert werden.  
+
+Dropezone funktioniert mit JavaScript, deshalb macht man eine JavaScript Referenz am Anfang oder Schluss des files.  
+'''html
+<script src="./path/to/dropzone.js"></script>
+'''
+
+Thats it.
+
+Nun kann man dropzone ganz einfach verwenden.  
+
+Dropzone kann man in den Konfigurationsdateien von Dropzone direkt anpassen.
+
+Zum Beispiel:
+* max. files
+* dateityp festlegen
+* dateinamen "verbieten"
+
+### Liste mit den Posts
 
 ## Selbstreflexion  
 
