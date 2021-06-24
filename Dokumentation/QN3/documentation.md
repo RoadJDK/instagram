@@ -210,7 +210,7 @@ Man merke die Ähnlichkeit, nicht nur die optische, sondern auch die technische.
 Deshalb hat man viel Code, welcher doppelt vorkommt in "Teilviews" unterteilt.
 
 Aufgerufen wird soeine mit dieser Zeile:
-```html
+```ruby
 <%= render "photos", { post: @post } %>
 ```
 Für das löschen von Posts, das Liken etc. werden Post oder Delete Abfragen gesendet.
@@ -231,7 +231,8 @@ Jedoch hat man das Gefühlt, die Aufträge sind sehr komisch geschrieben und tei
 
 Ich konnte auf einmal das Program nicht mehr starten, obwohl ich exzakt nach den Arbeitsblättern gegangen bin.
 
-Deshalb konnte ich Justins Version kopieren und an dieser weiterarbeiten (Wir waren bzw. sind auf dem gleichen Stand)
+Deshalb konnte ich Justins Version kopieren und an dieser weiterarbeiten (Wir waren bzw. sind auf dem gleichen Stand).  
+"Nicht mehr dieses Repo"
 
 Nach ein Paar Errors wegen dem Gemfile (Welches ich neu erstellen musste (Mit allen gems)),
 konnte ich endlich weiterarbeiten.
