@@ -44,19 +44,19 @@ Ohne Dropzone kommt lediglich ein Fenster, mit welcher man die Bilder auswählen
 Dropzone kann man innerhalb vom html aufrufen.
 
 Hier ein kleines Beispiel:  
-'''html
+```html
 <form action="/file-upload"
       class="dropzone"
       id="my-awesome-dropzone"></form>
-'''
+```
 
 Installieren tut man Dropzone als standalone.
 Diese wird als zip gedownloaded und muss irgendwo im Projekt abgespeichert werden.  
 
 Dropezone funktioniert mit JavaScript, deshalb macht man eine JavaScript Referenz am Anfang oder Schluss des files.  
-'''html
+```html
 <script src="./path/to/dropzone.js"></script>
-'''
+```
 
 Thats it.
 
